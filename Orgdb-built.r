@@ -90,6 +90,12 @@ colnames(ko2pathway)=c("KO",'Pathway')
 library(stringr)
 gene2ko$KO=str_replace(gene2ko$KO,"ko:","")
 
+#只提取苹果的KEGG pathway
+mdm <- read.table("Mdo.KEGG_ath.ko.txt",header=FALSE)
+colnames(mdm) <- c("Pathway")
+mdm <- tibble(mdm$Pathway)
+colnames(mdm) <- c("Pathway")
+
 # 合并代码是：
 gene2pathway <- gene2ko %>% left_join(ko2pathway, by = "KO") %>% 
   dplyr::select(GID, Pathway) %>%
