@@ -145,7 +145,7 @@ head(summary(x),1)
 setwd("~/kegg")
 glist <- read.table("DREB2A.IDR_All.geneid.txt",header=FALSE) #target gene list/DEGs
 glist <- glist[,1]
-geneList <- read.table("DREB2A.IDR_All.geneid.txt",header=FALSE) #background gene list
+geneList <- read.table("Background.All.geneid.txt",header=FALSE) #background gene list
 geneList <- geneList[,1]
 
 #KEGG pathway 富集
