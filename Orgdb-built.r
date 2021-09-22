@@ -1,5 +1,5 @@
 1.1 #读取数据
-setwd("J:/C盘/Project/psc-langlab/task/apple/wangxiaofei/2021年8月19日-DREB2A/ko/ko")
+setwd("~/ko")
 rm(list = ls())
 options(stringsAsFactors = F)
 library(tidyverse)
@@ -142,7 +142,7 @@ head(summary(x),1)
 """
 
 #input file
-setwd("J:/C盘/Project/psc-langlab/task/apple/wangxiaofei/2021年8月19日-DREB2A/ko/kegg")
+setwd("~/kegg")
 glist <- read.table("DREB2A.IDR_All.geneid.txt",header=FALSE) #target gene list/DEGs
 glist <- glist[,1]
 geneList <- read.table("DREB2A.IDR_All.geneid.txt",header=FALSE) #background gene list
